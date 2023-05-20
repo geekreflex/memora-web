@@ -1,13 +1,21 @@
-export default function DashboardLayout(props: {
+import Link from 'next/link';
+
+export default function DashboardLayout({
+  children,
+}: {
   children: React.ReactNode;
-  analytics: React.ReactNode;
-  team: React.ReactNode;
 }) {
   return (
-    <>
-      {props.children}
-      {props.team}
-      {props.analytics}
-    </>
+    <section>
+      <nav>
+        This is nav
+        <br /> <br />
+        <div>
+          <Link href="/dashboard/settings">Settings</Link>
+        </div>
+        <br />
+      </nav>
+      {children}
+    </section>
   );
 }
