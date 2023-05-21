@@ -112,3 +112,7 @@ a {
   width: 100%;
   padding: 0 20px;
 }
+
+.text-blue {
+  color: deepskyblue;
+}
