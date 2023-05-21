@@ -1,4 +1,5 @@
 import prisma from '@/utils/prisma';
+import Todo from './todo';
 
 export default async function Page() {
   const todos = await prisma.todo.findMany();
@@ -6,7 +7,7 @@ export default async function Page() {
     <div>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
+          <Todo todo={todo} />
         ))}
       </ul>
     </div>
