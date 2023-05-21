@@ -1,16 +1,14 @@
-interface IData {
-  name: string;
-  description: string;
-}
+import prisma from '@/utils/prisma';
 
 export default async function Page() {
-  const data = await fetch(`https://api.github.com/repos/tanstack/react-query`);
-  const res: IData = await data.json();
-  console.log(res);
+  const todos = await prisma.todo.findMany();
   return (
     <div>
-      <h1>{res.name}</h1>
-      <p>{res.description}</p>
+      <ul>
+        {todos.map((todo) => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
+      </ul>
     </div>
   );
 }
