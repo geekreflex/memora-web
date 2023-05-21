@@ -1,0 +1,35 @@
+.textfield {
+  border: 1px solid #888;
+  outline: none;
+  height: 300px;
+}
+
+.actions {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  display: flex;
+}
+
+.checkbox input[type='checkbox'] {
+  width: 20px;
+  border: 1px solid blue;
+}
+
+.checkbox input[type='text'] {
+  flex: 1;
+}
+
+.textarea {
+  display: flex;
+  width: 100%;
+  /* resize: none; */
+  outline: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  border: 1px solid #777;
+  white-space: pre-wrap;
+}

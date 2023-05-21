@@ -1,0 +1,32 @@
+.textarea {
+  border: none;
+  outline: none;
+  white-space: pre-wrap;
+  border: 1px solid red;
+}
+
+.checkbox {
+  width: 30px;
+}
+
+.check_field {
+  display: flex;
+  gap: 10px;
+}
+
+.check_field .textarea {
+  flex: 1;
+}
+
+.workspace {
+  border: 1px solid #555;
+  min-height: 300px;
+}
+
+.textarea2 {
+  border: none;
+  outline: none;
+  white-space: pre-wrap;
+  border: 1px solid red;
+  min-height: 300px;
+}
